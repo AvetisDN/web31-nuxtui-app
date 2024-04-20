@@ -1,4 +1,5 @@
 <template>
+  <NuxtLoadingIndicator />
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
@@ -12,10 +13,10 @@
 .page-leave-to {
   @apply opacity-0 blur-sm;
 }
-.page-enter-from {
-  @apply translate-x-24;
-}
-.page-leave-to {
-  @apply -translate-x-24;
-}
 </style>
+
+<script setup>
+const { fetchCategories } = useCategoriesStore();
+
+fetchCategories();
+</script>
