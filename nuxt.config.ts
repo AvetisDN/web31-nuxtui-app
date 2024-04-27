@@ -11,4 +11,7 @@ export default defineNuxtConfig({
     description: "Welcome to PINK STORE!",
     defaultLocale: "en", // not needed if you have @nuxtjs/i18n installed
   },
+  pinia: {
+    storesDirs: ["./stores/**"],
+  },
 });

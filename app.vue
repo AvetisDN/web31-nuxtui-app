@@ -18,5 +18,5 @@
 <script setup>
 const { fetchCategories } = useCategoriesStore();
 
-fetchCategories();
+await useAsyncData("categories", () => fetchCategories());
 </script>
